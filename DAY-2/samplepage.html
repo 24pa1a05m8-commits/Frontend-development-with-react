@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background-color:blue;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .contact {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        nav {
+            background:skyblue;
+            color:black;
+            padding: 12px 48px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            display: grid;
+            gap: 30px;
+            padding: 40px;
+            align-items: center;
+        }
+
+        .content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #1565c0;
+        }
+        .division{
+            display:flex;
+            padding:20px;
+            gap:20px;
+        }
+        .division div{
+            background-color:skyblue;
+            padding:20px;
+            border-radius:10px;
+        }
+        .image-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #e3f2fd;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://img.freepik.com/premium-vector/web-design-logo-vector-templet_1070930-291.jpg?semt=ais_hybrid" height="100px" width="100px">
+        <div class="brand">
+            <h1>My Webpage</h1>
+        </div>
+        <div class="contact">
+            <p>Contact: mywebpage@vishnu.edu.in<br>Mobile: 1234567890</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content">
+            <h2>Web Design Courses</h2>
+            <p>Web design courses help students build attractive and user-friendly websites using HTML, CSS, JavaScript,
+                and modern design principles. This simple webpage shows a clean structure with clear content and a
+                modern layout.</p>
+        </section>
+        <section class="division">
+            <div>
+                <h2>HTML</h2>
+                <p>It provides the basic structure and content of a webpage</p>
+            </div>
+            <div>
+                <h2>CSS</h2>
+                <p>It is used to style the webpage</p>
+            </div>
+            <div>
+                <h2>Javascript</h2>
+                <p>It is used to make the webpage interactive</p>
+            </div>
+        </section>
+
+        <section class="image-box">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                alt="Web design illustration">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Webpage. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
