@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student grade calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <script>
+            function getvalues(){
+                var value1=document.getElementById("firstnumber").value;
+                var v1=parseFloat(value1);
+                var value2=document.getElementById("Secondnumber").value;
+                var v2=parseFloat(value2);
+                if(isNaN(v1)||isNaN(v2)){
+                    alert("Please enter the valid numbers");
+                    return null;
+                }
+                return{v1,v2};
+            }
+            function addition(){
+                var numbers=getvalues();
+                if(numbers==null){
+                    return;
+                }
+                var res =numbers.v1+numbers.v2;
+                alert("The result is:"+res);
+            }
+            function subtraction(){
+                var numbers=getvalues();
+                if(numbers==null){
+                    return;
+                }
+                var res =numbers.v1-numbers.v2;
+                alert("The result is:"+res);
+            }
+            function multiplication(){
+                var numbers=getvalues();
+                if(numbers==null){
+                    return;
+                }
+                var res=numbers.v1*numbers.v2;
+                alert("The result is:"+res);
+            }
+            function division(){
+                var numbers=getvalues();
+                if(numbers==null){
+                    return;
+                }
+                var res=numbers.v1/numbers.v2;
+                alert("The result is:"+res);
+            }
+        </script>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <section>
+                        <form>
+                            <h2 class="text-primary" >Calculator</h2>
+                            <div>
+                                <label class="mb-4">Enter First number</label>
+                                <input type="number" placeholder="Enter first number" id="firstnumber" name="firstnumber" required>
+                            </div>
+                            <div>
+                                <label class="mb-4">Enter Second number</label>
+                                <input type="number" placeholder="Enter Second number" id="Secondnumber" name="Secondnumber" required>
+                            </div>
+                            <button class="btn btn-outline-primary" type="button" onclick="addition()">Addition</button>
+                            <button class="btn btn-outline-primary" type="button" onclick="subtraction()">subtraction</button>
+                            <button class="btn btn-outline-primary" type="button" onclick="multiplication()">multiplication</button>
+                            <button class="btn btn-outline-primary" type="button" onclick="division()">division</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
