@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Job Application form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width;initial-scale=1.0">
+        <style>
+            section{
+                text-align:center;
+                margin:100px auto;;
+                width:500px;
+                border:solid black;
+            }
+            .form-row{
+                margin: 10px;
+                gap: 10px 20px;
+            }
+            button {
+                background-color: blue;
+                color: white;
+                width: 100px;
+                height: 30px;
+                padding: 5px;
+                margin-top: 10px;
+            }
+            form label {
+                width: 150px;
+                text-align: right;
+            }
+            form input, select, textarea{
+                width:200px;
+                padding:5px;
+                text-align:left;
+                margin-left:20px;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <form>
+                <h2>Job Application form</h2>
+                <div class="form-row">
+                    <label>Name</label>
+                    <input type="text" name="studentname" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-row">
+                    <label>Father Name</label>
+                    <input type="text" name="Fathername" id="fname" placeholder="Enter Father name" required>
+                </div>
+                <div class="form-row">
+                    <label>Date of birth</label>
+                    <input type="date" name="dob" id="dob" placeholder="Enter DOB" required>
+                </div>
+                <div class="form-row">
+                    <label>Gender</label>
+                    <input type="radio" value="male" id="male">
+                    <label for="male">male</label>
+                    <input type="radio" value="female" id="female">
+                    <label for="female">female</label>
+                </div>
+                <div class="form-row">
+                    <label>Mobile number</label>
+                    <input type="tel" name="mobilenumber" id="mnumber" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-row">
+                    <label>Email Id</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email id" required>
+                </div>
+                <div class="form-row">
+                    <label>Role</label>
+                    <select id="role" name="role">
+                        <option value="Web developer">Web developer</option>
+                        <option value="Data analyst">Data analyst</option>
+                        <option value="ML engineer">ML engineer</option>
+                        <option value="Data scientist">Data scientist</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>photo</label>
+                    <input enctype="multipart/form-data" name="photo" id="photo" placeholder="Choose file" required>
+                </div>
+                <div class="form-row">
+                    <label>Address</label>
+                    <textarea rows="10" columns="20" name="address" id="address" placeholder="Enter Address" required></textarea>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </body>
+</html>

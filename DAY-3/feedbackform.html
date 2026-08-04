@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width;initial-scale=1.0">
+        <style>
+            section{
+                text-align:center;
+                margin:100px auto;
+                border:solid black;
+                width:500px;
+                gap:15px 20px;
+            }
+            .form-row{
+            margin: 10px;
+            gap: 10px 20px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 30px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        form label {
+            width: 150px;
+            text-align: right;
+        }
+        form input, select, textarea{
+            width:200px;
+            padding:5px;
+            text-align:left;
+            margin-left:20px;
+            flex-direction: column;
+        }
+        </style>
+    </head>
+    <body>
+        <section>
+            <form>
+                <h2>Feedback Form</h2>
+                <div class="form-row">
+                    <label>Appointment number</label>
+                    <input type="number" name="aptno" id="aptno" placeholder="Enter Appointment number" required>
+                </div>
+                <div class="form-row">
+                    <label>Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-row">
+                    <label>Date of birth</label>
+                    <input type="date" name="dob" id="dob" placeholder="Enter DOB" required>
+                </div>
+                <div class="form-row">
+                    <label>Mobile number</label>
+                    <input type="tel" name="mobilenumber" id="mnumber" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-row">
+                    <label>Gender</label>
+                    <input type="radio" value="male" id="male">
+                    <label for="male">male</label>
+                    <input type="radio" value="female" id="female">
+                    <label for="female">female</label>
+                </div>
+                <div class="form-row">
+                    <label>Doctor Consulted</label>
+                    <select id="doctor" name="doctor" value="select">
+                        <option value="Neurologist">Neurologist</option>
+                        <option value="Gynacologist">Gynacologist</option>
+                        <option value="Nephrologist">Nephrologist</option>
+                        <option value="psychologist">psychologist</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Feedback</label>
+                    <textarea rows="10" columns="20" name="feedback" id="feedback" placeholder="Enter feedback" required></textarea>
+                </div>
+                <div class="form-row">
+                    <label>Hospatality Rating</label>
+                    <input type="radio" value="notgood" id="notgood" name="rating">
+                    <label for="notgood">not good</label><br>
+                    <input type="radio" value="average" id="average" name="rating">
+                    <lebel for="average">average</lebel><br>
+                    <input type="radio" value="good" id="good" name="rating">
+                    <label for="good">good</label><br>
+                    <input type="radio" value="excellent" id="excellent" name="rating">
+                    <label for="excellent">excellent</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </body>
+</html>
