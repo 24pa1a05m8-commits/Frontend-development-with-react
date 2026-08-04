@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>connecting api</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <script>
+            fetch("https://api.escuelajs.co/api/v1/users")
+  .then((response) => {
+    return response.json();
+  })
+  .then((users) => {
+    const list = document.getElementById("user-list");
+    const table = document.getElementById("table-data");
+    users.forEach((user) => {
+      const ul = document.createElement("li");
+      ul.innerHTML =`
+        <li>${user.id}</li>
+        <li>${user.email}</li>
+        <li>${user.name}</li>
+        <li>${user.role}</li>
+    `;
+      list.appendChild(ul);
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${user.id}</td>
+        <td>${user.email}</td>
+        <td>${user.name}</td>
+        <td>${user.role}</td>
+        <td>
+          <img src="${user.avatar}" width="50" alt="${user.name}">
+        </td>
+      `;
+      table.appendChild(tr);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching users:", error);
+  });
+</script>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">id</li>
+            <li class="list-group-item">Email</li>
+            <li class="list-group-item">Name</li>
+            <li class="list-group-item">Role</li>
+            <li class="list-group-item">Avathar</li>
+        </ul>
+        <h2>Entries of Table</h2>
+        <table class="table table-striped-columns">
+            <tr>
+                <th>id</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>avathar</th>
+            </tr>
+            <tbody id="table-data"></tbody>
+        </table>
+    </body>
+</html>
