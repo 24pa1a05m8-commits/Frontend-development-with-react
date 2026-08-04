@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To check the given number is Factor of 84 or not</title>
+    </head>
+    <body>
+        <script>
+            function factorof84() {
+                let n = prompt("Enter a number to check if it is a factor of 84:");
+                let num = parseInt(n);
+                if (isNaN(num)|| num < 0) {
+                    alert("please enter a valid number");
+                }
+                if (84 % num == 0) {
+                    alert(num + " is a factor of 84");
+                }
+                else {
+                    alert(num + " is not a factor of 84");
+                }
+            }
+        </script>
+        <button onclick="factorof84()">Check if a number is a factor of 84</button>
+    </body>
+</html>

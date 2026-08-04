@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>check greatest number among given 2 numbers</title>
+    </head>
+    <body>
+        <script>
+            function greaterNum() {
+                let n = prompt("Enter a number:");
+                let num1 = parseInt(n);
+                let n1=prompt("Enter second number:");
+                let num2=parseInt(n1);
+                var res=(num1>num2)?"num1 is greater":"num2 is greater number";
+                alert(res);
+                if(num1>num2){
+                    alert(num1+" is greatest");
+                }
+                else{
+                    alert(num2+" is greatest");
+                }
+            }
+        </script>
+        <button onclick="greaterNum()">Greatest number</button>
+    </body>
+</html>

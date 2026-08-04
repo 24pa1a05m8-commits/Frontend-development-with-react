@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To check the given number is Factor of 96 and less than 96</title>
+    </head>
+    <body>
+        <script>
+            function factor96() {
+                let n = prompt("Enter a number:");
+                let num = parseInt(n);
+                if (isNaN(num)|| num < 0) {
+                    alert("please enter a valid number");
+                }
+                if (num>96) {
+                    alert("Please enter a valid number that is less than 96");
+                }
+                else {
+                    if(96%num==0){
+                        alert(num + " is a factor of 96");
+                    }
+                    else{
+                        alert(num + " is not a factor of 96");
+                    }
+                }
+            }
+        </script>
+        <button onclick="factor96()">Check number</button>
+    </body>
+</html>

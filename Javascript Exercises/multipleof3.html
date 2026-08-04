@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>check for Multiple of 3 or not</title>
+    </head>
+    <body>
+        <script>
+            function multiple() {
+                let n = prompt("Enter a number:");
+                let num = parseInt(n);
+                if(isNaN(num)||num<0){
+                    alert("please enter a valid number");
+                }
+                if(num%3==0){
+                    alert(num+" is a multiple of 3");
+                }
+                else{
+                    alert(num+" is not a multiple of 3");
+                }
+            }
+        </script>
+        <button onclick="multiple()">check number is multiple of 3 or not</button>
+    </body>
+</html>

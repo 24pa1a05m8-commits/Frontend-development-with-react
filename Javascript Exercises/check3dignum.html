@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>check the given number is 3 digit or not</title>
+    </head>
+    <body>
+        <script>
+            function numlen() {
+                let n = prompt("Enter a number:");
+                let num = parseInt(n);
+                if(num>=100&&num<=999){
+                    alert(num+" is a 3 digit number");
+                }
+                else{
+                    alert(num+" is not a 3 digit number");
+                }
+            }
+        </script>
+        <button onclick="numlen()">Length of number</button>
+    </body>
+</html>

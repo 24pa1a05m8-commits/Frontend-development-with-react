@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>check whether the given number is divisible by 7 or not</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width;initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        function division() {
+            let n = prompt("Enter a number to check the divisibility by 7:");
+            let num = parseInt(n);
+            if (isNaN(num)|| num < 0) {
+            alert("please enter a valid number");
+            }
+            if (num % 7 == 0) {
+                alert(num + " is divisible by 7");
+            }
+            else {
+                alert(num + " is not divisible by 7");
+            }
+        }
+        </script>
+        <button onclick="division()">Check divisibility by 7</button>
+    </body>
+</html>

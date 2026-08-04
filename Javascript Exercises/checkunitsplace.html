@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>check the units place of a given number</title>
+    </head>
+    <body>
+        <script>
+            function unitsplace() {
+                let n = prompt("Enter a number:");
+                let num = parseInt(n);
+                if(num%10==4){
+                    alert(num+" is having 4 in its units place");
+                }
+                else{
+                    alert(num+"is not having 4 in its units place");
+                }
+            }
+        </script>
+        <button onclick="unitsplace()">check units place value</button>
+    </body>
+</html>
